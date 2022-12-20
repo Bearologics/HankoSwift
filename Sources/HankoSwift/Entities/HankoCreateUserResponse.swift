@@ -1,17 +1,17 @@
 import Foundation
 
-struct HankoCreateUserResponse: Decodable {
+public struct HankoCreateUserResponse: Decodable {
     
-    struct WebauthnCredentials: Decodable {
+    public struct WebauthnCredentials: Decodable {
         let id: String
     }
     
-    let id: String
-    let email: String
-    let createdAt: Date
-    let updatedAt: Date
-    let verified: Bool
-    let webauthnCredentials: WebauthnCredentials
+    public let id: String
+    public let email: String
+    public let createdAt: Date
+    public let updatedAt: Date
+    public let verified: Bool
+    public let webauthnCredentials: WebauthnCredentials
     
     private enum CodingKeys: String, CodingKey {
         case id

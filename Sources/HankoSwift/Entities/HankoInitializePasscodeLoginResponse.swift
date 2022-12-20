@@ -1,9 +1,9 @@
 import Foundation
 
-struct HankoInitializePasscodeLoginResponse: Decodable {
-    let id: String
-    let ttl: Int
-    let createdAt: Date
+public struct HankoInitializePasscodeLoginResponse: Decodable {
+    public let id: String
+    public let ttl: Int
+    public let createdAt: Date
     
     private enum CodingKeys: String, CodingKey {
         case id

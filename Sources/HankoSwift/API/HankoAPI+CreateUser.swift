@@ -1,6 +1,6 @@
 import Foundation
 
-extension HankoAPI {
+public extension HankoAPI {
     func createUser(email: String) async throws -> HankoCreateUserResponse {
         var request = jsonRequest(for: "/users", method: .post)
         request.httpBody = try JSONEncoder().encode(["email": email])

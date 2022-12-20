@@ -1,14 +1,14 @@
 import Foundation
 
-struct HankoFinalizeWebauthnRegistrationRequest: Encodable {
-    struct Response: Encodable {
-        let clientDataJson: String
-        let attestationObject: String
-        let transports: String = "internal"
+public struct HankoFinalizeWebauthnRegistrationRequest: Encodable {
+    public struct Response: Encodable {
+        public let clientDataJson: String
+        public let attestationObject: String
+        public let transports: String = "internal"
     }
     
-    let id: String
-    let rawId: String
-    let type: String = "public-key"
-    let response: Response
+    public let id: String
+    public let rawId: String
+    public let type: String = "public-key"
+    public let response: Response
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-extension HankoAPI {
+public extension HankoAPI {
     func finalizeWebauthnRegistration(jwt: HankoJWT, hankoRequest: HankoFinalizeWebauthnRegistrationRequest) async throws -> HankoFinalizeWebauthnRegistrationResponse {
         var request = jsonRequest(for: "/webauthn/registration/finalize", method: .post)
         request.httpBody = try JSONEncoder().encode(hankoRequest)

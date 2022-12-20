@@ -1,7 +1,7 @@
-struct HankoUserDetailsResponse: Decodable {
-    let id: String
-    let verified: Bool
-    let hasWebauthnCredential: Bool
+public struct HankoUserDetailsResponse: Decodable {
+    public let id: String
+    public let verified: Bool
+    public let hasWebauthnCredential: Bool
     
     private enum CodingKeys: String, CodingKey {
         case id

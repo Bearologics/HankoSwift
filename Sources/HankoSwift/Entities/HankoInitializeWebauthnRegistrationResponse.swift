@@ -1,52 +1,50 @@
 import Foundation
 
-struct HankoInitializeWebauthnRegistrationResponse: Decodable {
-    
-    struct PublicKey: Decodable {
-        
-        struct Rp: Decodable {
-            let name: String
-            let id: String
+public struct HankoInitializeWebauthnRegistrationResponse: Decodable {
+    public struct PublicKey: Decodable {
+        public struct Rp: Decodable {
+            public let name: String
+            public let id: String
         }
         
-        struct User: Decodable {
-            let id: String
-            let name: String
-            let displayName: String
+        public struct User: Decodable {
+            public let id: String
+            public let name: String
+            public let displayName: String
         }
         
-        struct PubKeyCredParam: Decodable {
-            let type: String
-            let alg: Int
+        public struct PubKeyCredParam: Decodable {
+            public let type: String
+            public let alg: Int
         }
         
-        struct AuthenticatorSelection: Decodable {
-            enum AuthenticatorAttachment: String, Decodable {
+        public struct AuthenticatorSelection: Decodable {
+            public enum AuthenticatorAttachment: String, Decodable {
                 case platform, crossPlatform = "cross-platform"
             }
             
-            enum ResidentKey: String, Decodable {
+            public enum ResidentKey: String, Decodable {
                 case discouraged, preferred, required
             }
             
-            let authenticatorAttachment: AuthenticatorAttachment
-            let requireResidentKey: Bool
-            let residentKey: ResidentKey
-            let userVerification: ResidentKey
+            public let authenticatorAttachment: AuthenticatorAttachment
+            public let requireResidentKey: Bool
+            public let residentKey: ResidentKey
+            public let userVerification: ResidentKey
         }
         
-        enum Attestation: String, Decodable {
+        public enum Attestation: String, Decodable {
             case none, indirect, direct, enterprise
         }
         
-        let rp: Rp
-        let user: User
-        let challenge: String
-        let pubKeyCredParams: [PubKeyCredParam]
-        let timeout: Int
-        let authenticatorSelection: AuthenticatorSelection
-        let attestation: Attestation
+        public let rp: Rp
+        public let user: User
+        public let challenge: String
+        public let pubKeyCredParams: [PubKeyCredParam]
+        public let timeout: Int
+        public let authenticatorSelection: AuthenticatorSelection
+        public let attestation: Attestation
     }
     
-    let publicKey: PublicKey
+    public let publicKey: PublicKey
 }

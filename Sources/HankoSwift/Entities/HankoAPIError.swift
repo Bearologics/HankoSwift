@@ -1,4 +1,4 @@
-struct HankoAPIError: Codable {
+public struct HankoAPIError: Codable {
     let code: Int
     let message: String
 }

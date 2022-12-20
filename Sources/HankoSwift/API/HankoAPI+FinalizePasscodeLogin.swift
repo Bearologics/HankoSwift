@@ -1,8 +1,8 @@
 import Foundation
 
-typealias HankoJWT = String
+public typealias HankoJWT = String
 
-extension HankoAPI {
+public extension HankoAPI {
     func finalizePasscodeLogin(for id: String, code: String) async throws -> (HankoFinalizePasscodeLoginResponse, HankoJWT) {
         var request = jsonRequest(for: "/passcode/login/finalize", method: .post)
         request.httpBody = try JSONEncoder().encode(["id": id, "code": code])

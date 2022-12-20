@@ -1,6 +1,6 @@
 import Foundation
 
-extension HankoAPI {
+public extension HankoAPI {
     func initializePasscodeLogin(for userId: String) async throws -> HankoInitializePasscodeLoginResponse {
         var request = jsonRequest(for: "/passcode/login/initialize", method: .post)
         request.httpBody = try JSONEncoder().encode(["user_id": userId])

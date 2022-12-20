@@ -1,6 +1,6 @@
 import Foundation
 
-class HankoAPI {
+public class HankoAPI {
     let baseURL: URL
     let urlSession: URLSession
     
@@ -9,13 +9,13 @@ class HankoAPI {
         case post = "POST"
     }
     
-    enum APIError: Error {
+    public enum APIError: Error {
         case invalidResponse
         case httpError(Int?, String?)
         case noXAuthToken
     }
 
-    init(baseURL: URL, urlSession: URLSession) {
+    public init(baseURL: URL, urlSession: URLSession = .shared) {
         self.baseURL = baseURL
         self.urlSession = urlSession
     }
