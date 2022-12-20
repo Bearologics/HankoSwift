@@ -27,7 +27,7 @@ public struct HankoInitializeWebauthnRegistrationResponse: Decodable {
                 case discouraged, preferred, required
             }
             
-            public let authenticatorAttachment: AuthenticatorAttachment
+            public let authenticatorAttachment: AuthenticatorAttachment?
             public let requireResidentKey: Bool
             public let residentKey: ResidentKey
             public let userVerification: ResidentKey
