@@ -8,8 +8,8 @@ public struct HankoCreateUserResponse: Decodable {
     
     public let id: String
     public let email: String
-    public let createdAt: Date
-    public let updatedAt: Date
+    public let createdAt: String
+    public let updatedAt: String
     public let verified: Bool
     public let webauthnCredentials: WebauthnCredentials
     

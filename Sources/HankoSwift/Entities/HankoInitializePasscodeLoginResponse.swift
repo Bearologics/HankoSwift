@@ -3,7 +3,7 @@ import Foundation
 public struct HankoInitializePasscodeLoginResponse: Decodable {
     public let id: String
     public let ttl: Int
-    public let createdAt: Date
+    public let createdAt: String
     
     private enum CodingKeys: String, CodingKey {
         case id
