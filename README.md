@@ -16,6 +16,6 @@ This is a very quick implementation of the Hanko Passcode / Passkey Authenticati
 - [x] Implement finalize Webauthn registration
 
 - [x] Test Passcode implementation using sample app
-- [] Test Passkey (Webauthn) implementation using sample app
+- [ ] Test Passkey (Webauthn) implementation using sample app
 
-- [] Add test coverage
+- [ ] Add test coverage
