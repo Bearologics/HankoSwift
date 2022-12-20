@@ -1,3 +1,3 @@
 # HankoSwift
 
-A description of this package.
+A package to use the [Hanko.io](https://hanko.io) API from iOS / macOS Apps.
