@@ -7,11 +7,7 @@ public extension HankoAPI {
         var request = jsonRequest(for: "/passcode/login/finalize", method: .post)
         request.httpBody = try JSONEncoder().encode(["id": id, "code": code])
         let response = try await urlSession.data(for: request)
-        
-        guard let xAuthToken = (response.1 as? HTTPURLResponse)?.value(forHTTPHeaderField: "X-Auth-Token") else {
-            throw APIError.noXAuthToken
-        }
-        
-        return (try decode(response), xAuthToken)
+        let jsonWebToken = try TokenExtractor(response: response.1).extractJwt()
+        return (try decode(response), jsonWebToken)
     }
 }

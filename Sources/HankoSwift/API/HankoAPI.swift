@@ -12,7 +12,6 @@ public class HankoAPI {
     public enum APIError: Error {
         case invalidResponse
         case httpError(Int?, String?)
-        case noXAuthToken
     }
 
     public init(baseURL: URL, urlSession: URLSession = .shared) {
